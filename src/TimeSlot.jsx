@@ -398,7 +398,7 @@ function Footer({ go }) {
           </div>
         </div>
       </div>
-      <div className="text-center text-xs py-5" style={{ borderTop: "1px solid rgba(255,255,255,0.1)", color: "#8FA9A5" }}>© 2026 TimeSlot. Serving businesses across Pakistan.</div>
+      <div className="text-center text-xs py-5" style={{ borderTop: "1px solid rgba(255,255,255,0.1)", color: "#8FA9A5" }}>© 2026 TimeSlot. Serving businesses across Pakistan. Designed & Developed by Atika Nawaz.</div>
     </div>
   );
 }
@@ -1491,7 +1491,7 @@ function AboutPage() {
       <p className="text-base leading-relaxed mb-4" style={{ color: T.ink }}>TimeSlot started with a simple observation: small businesses across Pakistan were losing real money not to competitors, but to slow replies, double-bookings, and messages that got buried in WhatsApp chats.</p>
       <p className="text-base leading-relaxed mb-4" style={{ color: T.ink }}>A salon owner in Lahore was juggling three phone numbers just to keep track of appointments. A tutor in Karachi was manually cross-checking a notebook before confirming every class. None of that time was making anyone money it was just overhead standing between a business and its next customer.</p>
       <p className="text-base leading-relaxed mb-4" style={{ color: T.ink }}>So we built TimeSlot: a booking platform where availability is always live, double-bookings are structurally impossible, and customers can book in the time it takes to send a text without waiting for one back.</p>
-      <p className="text-base leading-relaxed" style={{ color: T.ink }}>Today, salons, tutors, gyms, clinics, consultants and photographers use TimeSlot to run their schedules — so they can spend more time on the work, and less time chasing it.</p>
+      <p className="text-base leading-relaxed" style={{ color: T.ink }}>Today, salons, tutors, gyms, clinics, consultants and photographers use TimeSlot to run their schedules so they can spend more time on the work, and less time chasing it.</p>
     </div>
   );
 }
@@ -1533,7 +1533,7 @@ function ContactPage({ setToast }) {
   return (
     <div className="max-w-xl mx-auto px-5 py-16">
       <h1 className="font-extrabold text-3xl mb-2" style={{ fontFamily: "Manrope,sans-serif", color: T.ink }}>Get in touch</h1>
-      <p style={{ color: T.sub }} className="mb-8">Questions, feedback, or partnership ideas — we read everything.</p>
+      <p style={{ color: T.sub }} className="mb-8">Questions, feedback, or partnership ideas we read everything.</p>
       <Card className="p-6" hover={false}>
         <div className="flex flex-col gap-4">
           <Input label="Name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
