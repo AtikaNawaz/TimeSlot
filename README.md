@@ -1,4 +1,4 @@
-# TimeSlot — Working Version
+# TimeSlot 
 
 This project uses the exact uploaded `TimeSlot.jsx` application as the main source.
 

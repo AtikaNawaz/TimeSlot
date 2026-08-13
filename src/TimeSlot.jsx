@@ -774,7 +774,7 @@ function BookingFlow({ go, businesses, bookings, updateBookings, updateWaitlist,
 
   function joinWaitlist() {
     updateWaitlist((prev) => [...prev, { id: "wl" + Date.now(), businessId: business.id, serviceId: service.id, date: activeISO, customerName: form.name || user?.name || "Guest", email: form.email || user?.email || "" }]);
-    setToast("You're on the waitlist — we'll notify you if a slot opens up.");
+    setToast("You're on the waitlist we'll notify you if a slot opens up.");
   }
 
   if (step === 4 && confirmedBooking) {
@@ -938,7 +938,7 @@ function LoginPage({ go, businesses, setUser, setToast }) {
             <Input label="Full name" value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name" />
             <Input label="Email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" />
             <Btn onClick={loginCustomer}>Continue</Btn>
-            <p className="text-xs text-center" style={{ color: T.sub }}>No password needed for this demo — just your name and email.</p>
+            <p className="text-xs text-center" style={{ color: T.sub }}>No password needed for this demo just your name and email.</p>
           </div>
         )}
         {tab === "business" && (
@@ -979,7 +979,7 @@ function OnboardingPage({ go, updateBusinesses, setUser, setToast }) {
     if (validServices.length === 0) { setToast("Add at least one service."); setStep(2); return; }
     const id = "b" + Date.now();
     const newBiz = {
-      id, name: form.name, category: form.category, location: form.location, description: form.description || `${form.name} — booked through TimeSlot.`,
+      id, name: form.name, category: form.category, location: form.location, description: form.description || `${form.name} booked through TimeSlot.`,
       rating: 5.0, ratingCount: 0, plan: "Growth", staffCount: 1, status: "pending", ownerEmail: form.ownerEmail,
       hours: { open: form.open, close: form.close, closedDays: form.closedDays },
       services: validServices.map((s, i) => ({ id: id + "-s" + i, name: s.name, price: Number(s.price), duration: Number(s.duration), description: s.description || "" })),
@@ -994,7 +994,7 @@ function OnboardingPage({ go, updateBusinesses, setUser, setToast }) {
       <div className="max-w-lg mx-auto px-5 py-20 text-center">
         <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5" style={{ backgroundColor: "#E6F4EA" }}><CheckCircle2 size={30} color="#1E7A34" /></div>
         <h1 className="font-extrabold text-2xl mb-2" style={{ fontFamily: "Manrope,sans-serif", color: T.ink }}>You're all set!</h1>
-        <p style={{ color: T.sub }} className="mb-2">Your 14-day Growth trial has started — no card required.</p>
+        <p style={{ color: T.sub }} className="mb-2">Your 14-day Growth trial has started no card required.</p>
         <p style={{ color: T.sub }} className="mb-8 text-sm">Your listing is pending a quick admin review before it appears in search (usually under 24 hours). You can manage services and view bookings right away from your dashboard.</p>
         <Btn onClick={() => go("businessDashboard")}>Go to my dashboard <ArrowRight size={16} /></Btn>
       </div>
@@ -1004,7 +1004,7 @@ function OnboardingPage({ go, updateBusinesses, setUser, setToast }) {
   return (
     <div className="max-w-2xl mx-auto px-5 py-12">
       <h1 className="font-extrabold text-3xl mb-1" style={{ fontFamily: "Manrope,sans-serif", color: T.ink }}>List your business</h1>
-      <p style={{ color: T.sub }} className="mb-8">Start your 14-day Growth trial — no card required.</p>
+      <p style={{ color: T.sub }} className="mb-8">Start your 14-day Growth trial no card required.</p>
       <div className="flex items-center gap-2 mb-8">
         {["Business info", "Services", "Hours"].map((l, i) => (
           <div key={l} className="flex items-center gap-2 flex-1">
@@ -1070,7 +1070,7 @@ function OnboardingPage({ go, updateBusinesses, setUser, setToast }) {
             ))}
           </div>
           <Card className="p-4 mb-6" hover={false}>
-            <div className="flex items-center gap-2 text-sm font-semibold" style={{ color: T.teal }}><Sparkles size={15} />14-day Growth trial included — no card required</div>
+            <div className="flex items-center gap-2 text-sm font-semibold" style={{ color: T.teal }}><Sparkles size={15} />14-day Growth trial included no card required</div>
             <p className="text-xs mt-1" style={{ color: T.sub }}>Unlimited bookings, up to 5 staff, no TimeSlot branding on emails.</p>
           </Card>
           <div className="flex gap-3"><Btn variant="outline" onClick={() => setStep(2)}>Back</Btn><Btn onClick={submit}>Finish & start trial <Check size={16} /></Btn></div>
@@ -1098,7 +1098,7 @@ function CustomerDashboard({ go, user, businesses, bookings, updateBookings, fav
     setToast("Booking cancelled.");
   }
   function rescheduleBooking(id) {
-    setToast("Reschedule request sent — pick a new time from the business page.");
+    setToast("Reschedule request sent pick a new time from the business page.");
     const bk = mine.find((b) => b.id === id);
     if (bk) { updateBookings((prev) => prev.map((b) => b.id === id ? { ...b, status: "cancelled" } : b)); go("booking", { businessId: bk.businessId, serviceId: bk.serviceId }); }
   }
@@ -1539,7 +1539,7 @@ function ContactPage({ setToast }) {
           <Input label="Name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
           <Input label="Email" type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
           <div><label className="block text-sm font-medium mb-1.5" style={{ color: T.ink }}>Message</label><textarea rows={4} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} className="w-full px-3.5 py-2.5 rounded-lg border text-sm outline-none" style={{ borderColor: T.border }} /></div>
-          <Btn onClick={() => { setToast("Message sent — we'll reply within 1 business day."); setForm({ name: "", email: "", message: "" }); }}>Send message</Btn>
+          <Btn onClick={() => { setToast("Message sent we'll reply within 1 business day."); setForm({ name: "", email: "", message: "" }); }}>Send message</Btn>
         </div>
       </Card>
       <div className="mt-6 text-sm" style={{ color: T.sub }}>Or email us directly at <span className="font-semibold" style={{ color: T.teal }}>hello.timeslot@gmail.com</span></div>
