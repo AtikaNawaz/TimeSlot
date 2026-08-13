@@ -416,7 +416,7 @@ function Homepage({ go, businesses }) {
             <h1 className="mt-5 font-extrabold leading-[1.05] tracking-tight" style={{ fontFamily: "Manrope,sans-serif", fontSize: "clamp(2.3rem,4.5vw,3.6rem)", color: T.ink }}>
               Book it. <span style={{ color: T.coral }}>Don't chase it.</span>
             </h1>
-            <p className="mt-5 text-lg max-w-lg" style={{ color: T.sub }}>TimeSlot lets salons, tutors, gyms, clinics and consultants take real bookings online — live availability, zero double-bookings, zero back-and-forth messages.</p>
+            <p className="mt-5 text-lg max-w-lg" style={{ color: T.sub }}>TimeSlot lets salons, tutors, gyms, clinics and consultants take real bookings online live availability, zero double-bookings, zero back-and-forth messages.</p>
             <div className="flex flex-wrap gap-3 mt-8">
               <Btn size="lg" onClick={() => go("onboarding")}>Start free trial <ArrowRight size={18} /></Btn>
               <Btn size="lg" variant="outline" onClick={() => go("search")}>Browse businesses</Btn>
@@ -452,11 +452,11 @@ function Homepage({ go, businesses }) {
 
       <section className="max-w-7xl mx-auto px-5 lg:px-8 py-20">
         <h2 className="text-center font-extrabold text-3xl mb-2" style={{ fontFamily: "Manrope,sans-serif", color: T.ink }}>How TimeSlot works</h2>
-        <p className="text-center mb-12" style={{ color: T.sub }}>Three simple steps — for customers and businesses alike.</p>
+        <p className="text-center mb-12" style={{ color: T.sub }}>Three simple steps for customers and businesses alike.</p>
         <div className="grid md:grid-cols-3 gap-6">
           {[
             { icon: Search, title: "Find & compare", body: "Search businesses by category, location and live availability." },
-            { icon: CalendarIcon, title: "Pick a live slot", body: "See real open times and book instantly — no calls, no waiting for replies." },
+            { icon: CalendarIcon, title: "Pick a live slot", body: "See real open times and book instantly no calls, no waiting for replies." },
             { icon: CheckCircle2, title: "Get confirmed", body: "Instant confirmation with reminders, so nobody forgets." },
           ].map((s, i) => (
             <Card key={i} className="p-7">
@@ -1488,9 +1488,9 @@ function AboutPage() {
     <div className="max-w-3xl mx-auto px-5 py-16">
       <Badge tone="coral">Our story</Badge>
       <h1 className="font-extrabold text-4xl mt-4 mb-6" style={{ fontFamily: "Manrope,sans-serif", color: T.ink }}>Built because chasing bookings shouldn't be the job.</h1>
-      <p className="text-base leading-relaxed mb-4" style={{ color: T.ink }}>TimeSlot started with a simple observation: small businesses across Pakistan were losing real money — not to competitors, but to slow replies, double-bookings, and messages that got buried in WhatsApp chats.</p>
-      <p className="text-base leading-relaxed mb-4" style={{ color: T.ink }}>A salon owner in Lahore was juggling three phone numbers just to keep track of appointments. A tutor in Karachi was manually cross-checking a notebook before confirming every class. None of that time was making anyone money — it was just overhead standing between a business and its next customer.</p>
-      <p className="text-base leading-relaxed mb-4" style={{ color: T.ink }}>So we built TimeSlot: a booking platform where availability is always live, double-bookings are structurally impossible, and customers can book in the time it takes to send a text — without waiting for one back.</p>
+      <p className="text-base leading-relaxed mb-4" style={{ color: T.ink }}>TimeSlot started with a simple observation: small businesses across Pakistan were losing real money not to competitors, but to slow replies, double-bookings, and messages that got buried in WhatsApp chats.</p>
+      <p className="text-base leading-relaxed mb-4" style={{ color: T.ink }}>A salon owner in Lahore was juggling three phone numbers just to keep track of appointments. A tutor in Karachi was manually cross-checking a notebook before confirming every class. None of that time was making anyone money it was just overhead standing between a business and its next customer.</p>
+      <p className="text-base leading-relaxed mb-4" style={{ color: T.ink }}>So we built TimeSlot: a booking platform where availability is always live, double-bookings are structurally impossible, and customers can book in the time it takes to send a text without waiting for one back.</p>
       <p className="text-base leading-relaxed" style={{ color: T.ink }}>Today, salons, tutors, gyms, clinics, consultants and photographers use TimeSlot to run their schedules — so they can spend more time on the work, and less time chasing it.</p>
     </div>
   );
